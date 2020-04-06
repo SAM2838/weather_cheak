@@ -1,6 +1,7 @@
 let appId = '0eebaf9a2b044d8de5b243ae8d18ba62';
 let units = 'imperial';
 let searchMethod;
+document.body.style.backgroundImage = 'url("Images/default.jpg")'
 
 function getSearchMethod(searchTerm){
     if(searchTerm.length === 5 && Number.parseInt(searchTerm) + '' === searchTerm)
@@ -23,25 +24,25 @@ function searchWeather(searchTerm){
 function init(resultFromServer){
     switch (resultFromServer.weather[0].main) {
         case 'Clear':
-            document.body.style.backgroundImage = 'url("clear.jpeg")'
+            document.body.style.backgroundImage = 'url("Images/clear.jpeg")'
             break;
 
         case 'Clouds':
-            document.body.style.backgroundImage = 'url("cloudy.jpeg")'
+            document.body.style.backgroundImage = 'url("Images/cloudy.jpeg")'
             break;
 
         case 'Rain':
         case 'Drizzle':
         case 'Mist':
-            document.body.style.backgroundImage = 'url("rain.jpeg")'
+            document.body.style.backgroundImage = 'url("Images/rain.jpeg")'
             break;
 
         case 'Thunderstorm' : 
-            document.body.style.backgroundImage = 'url("storm.jpeg")'
+            document.body.style.backgroundImage = 'url("Images/storm.jpeg")'
             break;
             
         case 'Snow' : 
-            document.body.style.backgroundImage = 'url("snow.jpeg")'
+            document.body.style.backgroundImage = 'url("Images/snow.jpeg")'
             break;
     
         default:
